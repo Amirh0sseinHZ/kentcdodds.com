@@ -44,6 +44,7 @@
     "lint": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --ext js,jsx,ts,tsx .",
     "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|gql|graphql|mdx|vue)\"",
     "typecheck": "tsc -b ./other/tsconfig-project.json",
+    "spellcheck": "cspell --cache --cache-location ./node_modules/.cache/.cspellcache --gitignore \"content/**/*.{js,jsx,ts,tsx,md,mdx}\"",
     "validate": "./other/validate",
     "setup": "npm install && docker compose up -d && prisma migrate reset --force && npm run validate && npm run prime-cache:mocks && npm run test:e2e:run"
   },
@@ -165,6 +166,7 @@
     "@types/uuid": "^8.3.4",
     "autoprefixer": "^10.4.8",
     "concurrently": "^7.3.0",
+    "cspell": "^6.12.0",
     "cssnano": "^5.1.13",
     "cypress": "^10.4.0",
     "dotenv-cli": "^6.0.0",
