@@ -48,9 +48,10 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 16
+          cache: 'npm'
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+        run: npm ci
 
       - name: 🔬 Lint
         run: npm run lint
@@ -71,9 +72,10 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 16
+          cache: 'npm'
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+        run: npm ci
 
       - name: 🔎 Type check
         run: npm run typecheck
@@ -94,9 +96,10 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 16
+          cache: 'npm'
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+        run: npm ci
 
       - name: 🃏 Run jest
         run: npm run test -- --coverage
@@ -129,9 +132,10 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 16
+          cache: 'npm'
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+        run: npm ci
 
       - name: 🎛 Installing ffmpeg
         uses: FedericoCarboni/setup-ffmpeg@v1
